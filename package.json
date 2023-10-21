@@ -1,0 +1,24 @@
+{
+  "name": "grownbetter-config-kit",
+  "version": "0.0.1",
+  "author": "grownbetter",
+  "description": "🗂️ ESLint, Prettier, Stylelint configuration for grownbetter",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "stylelint",
+    "config",
+    "javascript",
+    "typescript",
+    "grownbetter"
+  ],
+  "license": "MIT",
+  "engines": {
+    "pnpm": ">= 8"
+  },
+  "scripts": {
+    "deploy:prettier": "pnpm -F @grownbetter/prettier-config-grownbetter run deploy",
+    "deploy": "pnpm run deploy:prettier"
+  }
+}
