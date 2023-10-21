@@ -1,0 +1,38 @@
+{
+  "name": "@grownbetter/prettier-config-grownbetter",
+  "version": "0.0.1",
+  "description": "grownbetter's Prettier config",
+  "license": "MIT",
+  "main": "prettierrc.js",
+  "files": [
+    "*.js"
+  ],
+  "homepage": "https://github.com/grownbetter/prettier-config-grownbetter",
+  "bugs": {
+    "url": "https://github.com/grownbetter/prettier-config-grownbetter/issues"
+  },
+  "keywords": [
+    "prettier",
+    "javascript",
+    "typescript",
+    "convention"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/prettier-config-grownbetter"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "deploy": "npm publish --access=public",
+    "prettier": "prettier '**/*' --check",
+    "prettier:fix": "prettier '**/*' --write"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "prettier": "^2.0.0 || ^3.0.0"
+  }
+}

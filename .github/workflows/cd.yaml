@@ -1,0 +1,35 @@
+name: cd
+
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  NODE_VERSION: '16.x'
+  NPM_REGISTRY_URL: 'https://npm.pkg.github.com/'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: ${{ env.NPM_REGISTRY_URL }}
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: true
+
+      - name: 🛫 Deploy
+        run: pnpm run deploy
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
