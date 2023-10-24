@@ -1,0 +1,67 @@
+{
+  "name": "@grownbetter/eslint-config-grownbetter",
+  "version": "0.0.1",
+  "description": "grownbetter's Eslint config",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "rules",
+    "*.js"
+  ],
+  "homepage": "https://github.com/grownbetter/grownbetter-config-kit",
+  "bugs": {
+    "url": "https://github.com/grownbetter/grownbetter-config-kit/issues"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "javascript",
+    "typescript",
+    "convention"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grownbetter/grownbetter-config-kit",
+    "directory": "packages/eslint-config-grownbetter"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "lint": "npm run lint:es; npm run prettier",
+    "lint:fix": "npm run lint:es:fix; npm run prettier:fix",
+    "lint:es": "eslint '**/*.js'",
+    "lint:es:fix": "eslint '**/*.js' --fix",
+    "prettier": "prettier '**/*' --check",
+    "prettier:fix": "prettier '**/*' --write",
+    "deploy": "npm publish --access=public"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7"
+  }
+}
