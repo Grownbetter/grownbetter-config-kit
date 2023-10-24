@@ -7,9 +7,9 @@
   "files": [
     "*.js"
   ],
-  "homepage": "https://github.com/grownbetter/prettier-config-grownbetter",
+  "homepage": "https://github.com/grownbetter/grownbetter-config-kit",
   "bugs": {
-    "url": "https://github.com/grownbetter/prettier-config-grownbetter/issues"
+    "url": "https://github.com/grownbetter/grownbetter-config-kit/issues"
   },
   "keywords": [
     "prettier",
@@ -19,15 +19,17 @@
   ],
   "repository": {
     "type": "git",
+    "url": "https://github.com/grownbetter/grownbetter-config-kit",
     "directory": "packages/prettier-config-grownbetter"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "deploy": "npm publish --access=public",
     "prettier": "prettier '**/*' --check",
-    "prettier:fix": "prettier '**/*' --write"
+    "prettier:fix": "prettier '**/*' --write",
+    "deploy": "npm publish --access=public"
   },
   "devDependencies": {
     "prettier": "^3.0.3"
