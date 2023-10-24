@@ -18,7 +18,8 @@
     "pnpm": ">= 8"
   },
   "scripts": {
+    "deploy:eslint": "pnpm -F @grownbetter/eslint-config-grownbetter run deploy",
     "deploy:prettier": "pnpm -F @grownbetter/prettier-config-grownbetter run deploy",
-    "deploy": "pnpm run deploy:prettier"
+    "deploy": "pnpm run deploy:eslint && pnpm run deploy:prettier"
   }
 }
