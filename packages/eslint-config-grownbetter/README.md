@@ -1,9 +1,25 @@
 # @grownbetter/eslint-config-grownbetter
 
+## Setup
+
+프로젝트 루트에 `.npmrc` 파일을 생성하고 다음을 추가해주세요.
+
+```bash
+@grownbetter:registry=https://npm.pkg.github.com/
+```
+
+npm 로그인을 진행해주세요.
+
+```bash
+npm adduser
+```
+
+password는 `personal github token`을 이용해주세요
+
 ## Installation
 
 ```bash
-npm install @@grownbetter/eslint-config-grownbetter eslint --save-dev
+npm install @@grownbetter/eslint-config-grownbetter --save-dev
 ```
 
 ## Usage

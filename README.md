@@ -5,4 +5,5 @@
 
 그로우앤베터의 컨벤션 규칙을 정의한 Linter/Formatter Configuration의 모음입니다.
 
+- [@grownbetter/eslint-config-grownbetter](packages/eslint-config-grownbetter)
 - [@grownbetter/prettier-config-grownbetter](packages/prettier-config-grownbetter)
