@@ -57,5 +57,20 @@ module.exports = {
      * @link https://typescript-eslint.io/rules/consistent-type-imports/
      */
     '@typescript-eslint/consistent-type-imports': 'error',
+    /**
+     * @description 허용되지 않은 장소에서의 Promise 사용
+     * @link https://typescript-eslint.io/rules/no-misused-promises/
+     */
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        checksVoidReturn: false,
+      },
+    ],
+    /**
+     * @description 생성된 Promise에 대한 처리 여부
+     * @link https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-floating-promises.md
+     */
+    '@typescript-eslint/no-floating-promises': 'off',
   },
 };
