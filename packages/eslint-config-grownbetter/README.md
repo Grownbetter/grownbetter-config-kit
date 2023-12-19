@@ -6,25 +6,28 @@
 
 ```bash
 @grownbetter:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=${NPM_TOKEN}
+
 ```
 
-npm 로그인을 진행해주세요.
+`zshrc`파일에 전역 변수를 등록합니다.
 
 ```bash
-npm adduser
-```
+vi ~/.zshrc
 
-password는 `personal github token`을 이용해주세요
+# TOKEN
+export NPM_TOKEN=${NPN_TOKEN} // Github 토큰값 입력
+```
 
 ## Installation
 
 ```bash
-npm install @@grownbetter/eslint-config-grownbetter --save-dev
+npm install @grownbetter/eslint-config-grownbetter --save-dev
 ```
 
 ## Usage
 
-`package.json`의 scripts 속성에 다음을 추가해주세요.
+`package.json`의 `scripts` 속성에 다음을 추가해주세요.
 
 ```json
 {
